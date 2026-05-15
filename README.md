@@ -1,170 +1,195 @@
-# Claude Code System Prompts
+Here’s a more professional and modern README version for your repo with a cleaner structure, stronger branding, and your socials added at the end. Based on your uploaded README content. 
 
-A research project exploring how modern agentic AI coding assistants work under the hood. This repository contains our best understanding of the prompt architecture, agent coordination patterns, and security mechanisms that power tools like Claude Code.
+# ⚡ Agentic AI Prompt Research
 
-Everything here is based on behavioral observation, output analysis, community discussions, and publicly shared information. These are reconstructed approximations, not verbatim copies. The actual implementation may differ significantly.
+> Research-driven exploration into the architecture, orchestration, and security design patterns behind modern Agentic AI coding assistants.
 
-## What This Project Is
+<p align="center">
+  <img src="https://img.shields.io/badge/Research-Agentic%20AI-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Focus-LLM%20Systems-black?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Domain-Prompt%20Engineering-purple?style=for-the-badge" />
+</p>
 
-This is an educational deep-dive into the design patterns behind agentic coding assistants. We analyze how these systems:
+---
 
-- Assemble dynamic system prompts at runtime
-- Coordinate multiple specialized sub-agents
-- Classify and auto-approve tool calls safely
-- Manage context windows through intelligent compaction
-- Handle memory, skills, and user preferences
+## 📌 Overview
 
-The goal is to help AI engineers, researchers, and builders learn from these architectural patterns and apply them in their own projects.
+This repository explores how modern AI coding assistants and autonomous agent systems may operate internally.
 
-## What This Project Is Not
+The project focuses on:
 
-This is **not** a leak, dump, or direct copy of any proprietary system. The prompts documented here are our best reconstructions based on observable behavior. They represent one interpretation of how these systems likely work.
+* Dynamic system prompt assembly
+* Multi-agent orchestration workflows
+* Context and memory management
+* Permission & security classification
+* Tool execution pipelines
+* Autonomous reasoning patterns
 
-## Documented Patterns
+The documented structures are reconstructed through:
 
-### Core Identity
+* Behavioral analysis
+* Output observation
+* Community research
+* Publicly available information
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 01 | [Main System Prompt](prompts/01_main_system_prompt.md) | How the master prompt is dynamically assembled from modular sections |
-| 02 | [Simple Mode](prompts/02_simple_mode.md) | Minimal prompt variant for lightweight operation |
-| 03 | [Default Agent Prompt](prompts/03_default_agent_prompt.md) | Base instructions inherited by all sub-agents |
-| 04 | [Cyber Risk Instruction](prompts/04_cyber_risk_instruction.md) | Security boundaries between authorized and prohibited actions |
+> ⚠️ This repository contains research approximations and educational interpretations — not leaked proprietary prompts or internal implementations.
 
-### Orchestration
+---
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 05 | [Coordinator System Prompt](prompts/05_coordinator_system_prompt.md) | Multi-worker orchestration with phased workflows |
-| 06 | [Teammate Prompt Addendum](prompts/06_teammate_prompt_addendum.md) | Communication protocols for multi-agent collaboration |
+# 🧠 Core Research Areas
 
-### Specialized Agents
+## 🔹 Prompt Architecture
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 07 | [Verification Agent](prompts/07_verification_agent.md) | Adversarial testing agent that validates implementations |
-| 08 | [Explore Agent](prompts/08_explore_agent.md) | Read-only codebase exploration with no-modify constraints |
-| 09 | [Agent Creation Architect](prompts/09_agent_creation_architect.md) | Generates new agent configurations from requirements |
-| 10 | [Status Line Setup Agent](prompts/10_statusline_setup_agent.md) | Terminal status line configuration across shells |
+Understanding how large-scale AI systems dynamically construct layered system prompts.
 
-### Security and Permissions
+### Includes:
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 11 | [Permission Explainer](prompts/11_permission_explainer.md) | Risk assessment before tool approval |
-| 12 | [Auto Mode Classifier](prompts/12_yolo_auto_mode_classifier.md) | Multi-stage security classifier for autonomous tool execution |
+* Main System Prompt
+* Simple Mode
+* Default Agent Prompt
+* Cyber Risk Instructions
 
-### Tool Descriptions
+---
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 13 | [Tool-Specific Prompts](prompts/13_tool_prompts.md) | How individual tools (Bash, Edit, Agent, etc.) describe themselves |
+## 🔹 Multi-Agent Orchestration
 
-### Utility Patterns
+Research into how AI systems coordinate multiple specialized workers.
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 14 | [Tool Use Summary](prompts/14_tool_use_summary.md) | Generating concise labels for completed tool batches |
-| 15 | [Session Search](prompts/15_session_search.md) | Semantic search across past conversation sessions |
-| 16 | [Memory Selection](prompts/16_memory_selection.md) | Selecting relevant memory files for query context |
-| 17 | [Auto Mode Critique](prompts/17_auto_mode_critique.md) | Reviewing user-written classifier rules |
-| 20 | [Session Title](prompts/20_session_title.md) | Lightweight title generation for session management |
-| 29 | [Agent Summary](prompts/29_agent_summary.md) | Background progress updates for sub-agents |
-| 30 | [Prompt Suggestion](prompts/30_prompt_suggestion.md) | Predicting likely user follow-up commands |
+### Includes:
 
-### Context Window Management
+* Coordinator System Prompt
+* Teammate Communication Protocols
+* Workflow Delegation Patterns
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 21 | [Compact Service](prompts/21_compact_service.md) | Conversation summarization strategies for long sessions |
-| 22 | [Away Summary](prompts/22_away_summary.md) | Brief session recaps for returning users |
+---
 
-### Dynamic Behaviors
+## 🔹 Specialized AI Agents
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 18 | [Proactive Mode](prompts/18_proactive_mode.md) | Autonomous background operation with pacing controls |
-| 23 | [Chrome Browser Automation](prompts/23_chrome_browser_automation.md) | Browser extension integration patterns |
-| 24 | [Memory Instruction](prompts/24_memory_instruction.md) | Hierarchical memory loading and override semantics |
+Analysis of dedicated agents responsible for validation, exploration, and configuration.
 
-### Skill Patterns
+### Includes:
 
-| # | Pattern | Description |
-|---|---------|-------------|
-| 19 | [Simplify Skill](prompts/19_simplify_skill.md) | Multi-agent parallel code review pattern |
-| 25 | [Skillify Skill](prompts/25_skillify.md) | Interview-based skill creation workflow |
-| 26 | [Stuck Skill](prompts/26_stuck_skill.md) | Session diagnostic and recovery patterns |
-| 27 | [Remember Skill](prompts/27_remember_skill.md) | Memory organization and promotion workflow |
-| 28 | [Update Config Skill](prompts/28_update_config_skill.md) | Configuration management patterns |
+* Verification Agent
+* Explore Agent
+* Agent Creation Architect
+* Status Line Setup Agent
 
-## Architectural Observations
+---
 
-### Dynamic Prompt Assembly
+## 🔹 Security & Permission Systems
 
-Based on our analysis, the system prompt appears to be assembled through a pipeline of modular builders:
+Exploration of safe autonomous execution and tool approval pipelines.
 
-```
+### Includes:
+
+* Permission Explainer
+* Auto Mode Classifier
+* Risk Assessment Workflows
+
+---
+
+## 🔹 Context & Memory Management
+
+Understanding how AI systems manage long conversations and hierarchical memory loading.
+
+### Includes:
+
+* Compact Service
+* Away Summary
+* Memory Selection
+* Memory Instructions
+
+---
+
+# 🏗️ Architectural Insights
+
+## Dynamic Prompt Assembly
+
+Modern agentic systems appear to construct prompts using modular layered pipelines:
+
+```txt
 Prompt Assembly Pipeline
-    |
-    |   Cacheable Prefix (stable across sessions)
-    |-- Identity and safety instructions
-    |-- Permission and hook configuration
-    |-- Code style and error handling rules
-    |-- Tool preferences and usage patterns
-    |-- Tone, style, and output rules
-    |
-    |   Cache Boundary
-    |
-    |   Dynamic Suffix (changes per session)
-    |-- Available agents and skills
-    |-- Memory file contents
-    |-- Environment context (OS, directory, git state)
-    |-- Language and output preferences
-    |-- Active MCP server instructions
-    |-- Context window management directives
+│
+├── Stable Cacheable Prefix
+│   ├── Safety Instructions
+│   ├── Tool Rules
+│   ├── Style & Behavior
+│   ├── Permission Logic
+│
+├── Cache Boundary
+│
+└── Dynamic Session Context
+    ├── Active Agents
+    ├── Memory Files
+    ├── Environment State
+    ├── User Preferences
+    ├── MCP Instructions
 ```
 
-### Security Classification
+---
 
-The auto-approval system appears to use a multi-stage approach:
+## Security Classification Pipeline
 
-1. A base classifier with predefined rules for safe and unsafe operations
-2. User-configurable overrides that can extend or restrict the defaults
-3. A fast first pass, with extended reasoning as fallback for ambiguous cases
+The research suggests AI systems use multi-stage validation:
 
-### Memory Hierarchy
+1. Base safety classifier
+2. Rule-based permission overrides
+3. Fast approval pass
+4. Extended reasoning fallback
 
-```
-Loading Order (earliest = lowest priority):
-    |
-    |-- Enterprise/managed configuration
-    |-- User global preferences
-    |-- Project-level instructions (shared)
-    |-- Project rules directory
-    |-- Local overrides (private, not committed)
-    |
-    |   Supports transitive file inclusion
-    |   Conditional injection via path-based filtering
-```
+---
 
-## Use Cases
+# 📂 Repository Structure
 
-This research is useful for:
-
-- **AI engineers** building their own agentic coding tools
-- **Prompt engineers** studying production-grade prompt architectures
-- **Security researchers** understanding how autonomous AI tools manage permissions
-- **Students and educators** learning about multi-agent system design
-
-## Repository Structure
-
-```
-claude-code-system-prompts/
-    README.md
-    prompts/
-        01-30 documented patterns (see catalog above)
+```bash
+agentic-ai-prompt-research/
+│
+├── README.md
+│
+└── prompts/
+    ├── 01_main_system_prompt.md
+    ├── 02_simple_mode.md
+    ├── 03_default_agent_prompt.md
+    ├── ...
+    └── 30_prompt_suggestion.md
 ```
 
-## Disclaimer
+---
 
-This is an independent research project. All content represents our analysis and approximations based on publicly observable behavior. This project is not affiliated with, endorsed by, or connected to Anthropic. All trademarks belong to their respective owners. If any content owner has concerns, please open an issue and we will address it promptly.
+# 🎯 Use Cases
+
+This repository is useful for:
+
+* AI/ML Engineers
+* Agentic AI Developers
+* Prompt Engineers
+* LLM Researchers
+* Security Researchers
+* Students learning autonomous AI systems
+
+---
+
+# ⚠️ Disclaimer
+
+This is an independent educational research project.
+
+All content represents reconstructed approximations based on observable AI behavior and publicly available information.
+
+This project is **not affiliated with, endorsed by, or connected to Anthropic or any proprietary AI provider.**
+
+All trademarks belong to their respective owners.
+
+---
+
+# 🌐 Connect With Me
+
+### 👨‍💻 Sujal Deshmukh
+
+AI/ML Developer • Agentic AI Engineer • Prompt Engineer
+
+* GitHub: [https://github.com/Sujald06](https://github.com/Sujald06)
+* LinkedIn: [https://www.linkedin.com/in/sujal-deshmukh-a93060349/](https://www.linkedin.com/in/sujal-deshmukh-a93060349/)
+
+---
+
+⭐ If you found this project useful, consider giving it a star.
